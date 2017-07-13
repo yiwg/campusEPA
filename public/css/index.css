@@ -1,0 +1,96 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #ddd;
+}
+
+.classname {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 200px 0;
+}
+
+#header {
+    height: 1.8rem;
+    background: #212121;
+    text-align: center;
+    font: bold 1rem/1.8rem "微软雅黑";
+    color: #efefef;
+    box-shadow: 0 0 10px #000;
+}
+
+#wrap {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#pics {
+    position: relative;
+}
+
+#pics .pic {
+    overflow: hidden;
+}
+
+#pics .pic li {
+    width: 6.2rem;
+    float: left;
+    height: 6.2rem;
+    background: url(../pics/loading.gif) center center no-repeat #eee;
+    border-radius: 10px;
+    border: .4rem solid #fff;
+    margin: .5rem;
+}
+
+#pics .pic img {
+    width: 6.2rem;
+    height: 6.2rem;
+}
+
+#more {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    background: #ffffff;
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    font: bold 12px/50px "微软雅黑";
+    color: #666;
+    opacity: 0;
+    transition: .2s opacity;
+}
+
+#more .ico {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../pics/loadings.gif) no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>图片下拉加载</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="../publicjs/data.js"></script>
+    <script src="../public/js/touchScroll.js"></script>
+    <script>
+    var oHtml = document.getElementsByTagName("html")[0];
+    oHtml.style.fontSize = document.documentElement.clientWidth / 16 + "px";
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        图片下拉加载
+    </header>
+    <section id="wrap">
+        <section id="pics">
+            <ul class="pic">
+            </ul>
+            <div class="more" id="more"><span class="ico"></span>加载更多</div>
+        </section>
+    </section>
+    <script src="../public/jsjs/index.js"></script>
+    <div id="testid" class="classname">
+        <h6>请在移动设备上查看Demo演示效果，谢谢！</h6>
+    </div>
+    <script type="text/javascript">
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            // testId.style.cssText = 'display: none';
+        } else {
+
+            var testId = document.getElementById("testid");
+            testId.style.cssText = 'display: block';
+        }
+    }
+
+    browserRedirect();
+    </script>
+</body>
+
+</html>
